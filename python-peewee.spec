@@ -7,12 +7,13 @@
 
 Name:		python-%{pypi_name}
 Version:	2.10.2
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	A small, expressive orm
 
 License:	MIT
 URL:		http://github.com/coleifer/peewee/
 Source0:	https://files.pythonhosted.org/packages/7a/bc/aafce76cae9362dccf70e35c16a6cc11d114ebb640bbb86d76255be5c0d6/peewee-2.10.2.tar.gz
+BuildArch:      noarch
 
 BuildRequires:	python2-devel
 BuildRequires:	python2-setuptools
@@ -60,6 +61,9 @@ rm %{buildroot}%{_bindir}/pwiz.py
 
 
 %changelog
+* Wed Aug 21 2019 Alexandru Avadanii <Alexandru.Avadanii@enea.com> - 2.10.1-4
+- Change BuildArch to noarch (platform independent package)
+
 * Thu Aug 03 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.10.1-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Binutils_Mass_Rebuild
 
